@@ -1,11 +1,16 @@
 package xyz.ronella.gosu.ginfuser.annotation
 
+uses java.lang.annotation.Retention
+uses java.lang.annotation.Target
+
 /**
  * Marks the field that must infuse a Date field from the sourceObject to beanObject.
  *
  * @author Ron Webb
  * @since 2019-04-08
  */
+@Target({METHOD})
+@Retention(RUNTIME)
 annotation DateFieldInfuser {
 
   /**
