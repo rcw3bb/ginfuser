@@ -16,12 +16,6 @@ class InfuseFieldInfuserTest extends TestClass {
     assertEquals("SubClassTest", sampleDTO.ChildClass.Column1)
   }
 
-/*  public function testInfuseFieldDefault() {
-    var sampleClass = new SampleClass()
-    var sampleDTO = Infuser.getBuilder<SampleDTO>().async().build().infuse(sampleClass, new SampleDTO())
-    assertEquals("Default1", sampleDTO.Column1)
-  }*/
-
   public function testInfuseFieldNull() {
     var sampleClass = new SampleClass()
     var sampleDTO = Infuser.getBuilder<SampleDTO>().async().build().infuse(sampleClass, new SampleDTO())
