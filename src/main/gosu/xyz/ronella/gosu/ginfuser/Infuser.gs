@@ -32,7 +32,7 @@ class Infuser<TYPE_BEAN> {
 
     private var infuser : Infuser<TYPE_BEAN_BUILD>
 
-    construct () {
+    private construct () {
       infuser = new Infuser<TYPE_BEAN_BUILD>()
     }
 
