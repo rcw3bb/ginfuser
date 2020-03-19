@@ -49,7 +49,7 @@ Add the following **maven** dependency to your **gosu** project:
 | ----------- | ---------------- |
 | Group ID    | xyz.ronella.gosu |
 | Artifact ID | ginfuser          |
-| Version     | 1.0.0            |
+| Version     | 1.1.0            |
 > Using gradle, this can be added as a dependency entry like the following:
 >
 > ```groovy
