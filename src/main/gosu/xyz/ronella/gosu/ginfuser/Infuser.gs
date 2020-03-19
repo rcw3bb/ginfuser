@@ -116,7 +116,7 @@ class Infuser<TYPE_BEAN> {
    * @author Ron Webb
    * @since 2019-04-08
    */
-  public static function getBuilder<TYPE_DTO_BUILD>() : Builder<TYPE_DTO_BUILD> {
+  public reified static function getBuilder<TYPE_DTO_BUILD>() : Builder<TYPE_DTO_BUILD> {
     return new Builder<TYPE_DTO_BUILD>()
   }
 
