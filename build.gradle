@@ -2,10 +2,12 @@ import java.nio.file.Paths
 
 plugins {
     id 'org.gosu-lang.gosu' version '0.3.10'
+    id "com.bmuschko.nexus" version "2.3.1"
+    id "io.codearte.nexus-staging" version "0.21.1"
 }
 
 group 'xyz.ronella.gosu'
-version '1.0-SNAPSHOT'
+version '1.0.0'
 
 sourceCompatibility = 1.8
 
@@ -17,6 +19,53 @@ repositories {
             password "${artifactoryPassword}"
         }
     }
+}
+
+modifyPom {
+    project {
+        name 'GInfuser'
+        description 'A gosu implementation to map a domain class into a DTO *(data transfer object)*. This utilizes annotations to describe how the fields in the DTO must be populated.'
+        url 'https://github.com/rcw3bb/ginfuser'
+        inceptionYear '2020'
+
+        scm {
+            url 'https://github.com/rcw3bb/ginfuser'
+            connection 'https://github.com/rcw3bb/ginfuser.git'
+            developerConnection 'https://github.com/rcw3bb/ginfuser.git'
+        }
+
+        licenses {
+            license {
+                name 'MIT License'
+                url 'https://github.com/rcw3bb/ginfuser/blob/master/LICENSE.md'
+                distribution 'repo'
+            }
+        }
+
+        developers {
+            developer {
+                id 'rcw3bb'
+                name 'Ronaldo Webb'
+                email 'ronaldo.c.webb@gmail.com'
+            }
+        }
+    }
+}
+
+extraArchive {
+    sources = true
+    tests = true
+    javadoc = true
+}
+
+nexus {
+    sign = true
+    repositoryUrl = 'https://oss.sonatype.org/service/local/staging/deploy/maven2'
+    snapshotRepositoryUrl = 'https://oss.sonatype.org/content/repositories/snapshots'
+}
+
+nexusStaging {
+    stagingProfileId = "33650220e7857c"
 }
 
 dependencies {
