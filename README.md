@@ -99,7 +99,7 @@ final class SampleDTO {
 
   @CalculatedFieldInfuser(
       :calculateMethod = "generateNames", :calculateMethodReturnType = "java.util.List<String>",
-      :supportClass = "xyz.ronella.gosu.ginfuser.dto.SampleSupport"
+      :supportClass = "SampleSupport"
   )
   private var _names : List<String> as Names
 
@@ -113,7 +113,7 @@ final class SampleDTO {
   private var _tmp : String as Dummy
 
   @InfuseFieldInfuser(:sourceField = "SubClass",
-    :sourceFieldType = "xyz.ronella.gosu.ginfuser.business.SampleClass2"
+    :sourceFieldType = "SampleClass2"
   )
   private var _childClass : SampleDTO2 as ChildClass
 
